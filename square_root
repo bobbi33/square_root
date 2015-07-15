@@ -1,0 +1,21 @@
+#include "stdafx.h"
+
+
+int main(){
+
+	float new_guess = 1;
+	float old_guess = 0;
+	float number = 0;
+	scanf("%f",&number);
+
+	do{
+		old_guess = new_guess;
+		new_guess = (old_guess + number/old_guess)/2;
+		printf("%.15e\n",new_guess);
+	
+	}while(new_guess != old_guess);
+
+	printf("squre root of %g is %g",number , new_guess);
+	return 0;
+}
+
